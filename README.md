@@ -1,4 +1,4 @@
-#GIPHT
+# **GIPHT**
 **Search GIFs**
 
 Coming Soon!
