@@ -11,28 +11,24 @@ class App extends Component {
     this.state = {
       gifs: []
     };
-    this.searchGiphy = this.searchGiphy.bind(this);
   }
-  searchGiphy = (event) => {
+
+  searchGiphy = (event) =>{
+    var that = this;
     if (event.key === 'Enter') {
-      fetch('http://api.giphy.com/v1/gifs/search?q=' + event.target.value + '&api_key=dc6zaTOxFJmzC', {method: 'get'}).then(function(response) {
-        return response.json();
-      }).then(function(result) {
-        this.setState({gifs: result.data});
-        console.log(result.data);
-      }).catch(function(err) {
-        // Error :(
-      });
+      fetch('http://api.giphy.com/v1/gifs/search?q=' + event.target.value + '&api_key=dc6zaTOxFJmzC', {method: 'get'})
+      .then(res => res.json())
+      .then(result => that.setState({gifs: result.data}));
     }
   }
-  render() {
 
+  render() {
     return (
       <div className="App">
         <Header/>
         <SearchBar searchGiphy={this.searchGiphy}/>
         <br/>
-        <GifGrid gifs={this.state.gifs}/>
+        <GifGrid gifs={this.state.gifs} className="Grid"/>
       </div>
     );
   }

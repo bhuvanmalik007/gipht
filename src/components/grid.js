@@ -4,35 +4,17 @@ import {Grid, Image} from 'semantic-ui-react'
 class GifGrid extends React.Component {
   render() {
     console.log(this.props.gifs);
+    let gifArray = this.props.gifs.map((gif)=>
+    <Grid.Column>
+      <Image src={gif.images.fixed_width.url}/>
+    </Grid.Column>
+    );
     return (
       <Grid container columns={3}>
-        <Grid.Column>
-          <Image src='https://skpsoft.com/baby/wp-content/uploads/2016/09/default-thumbnail.jpg'/>
-        </Grid.Column>
-        <Grid.Column>
-          <Image src='https://skpsoft.com/baby/wp-content/uploads/2016/09/default-thumbnail.jpg'/>
-        </Grid.Column>
-        <Grid.Column>
-          <Image src='https://skpsoft.com/baby/wp-content/uploads/2016/09/default-thumbnail.jpg'/>
-        </Grid.Column>
-        <Grid.Column>
-          <Image src='https://skpsoft.com/baby/wp-content/uploads/2016/09/default-thumbnail.jpg'/>
-        </Grid.Column>
-        <Grid.Column>
-          <Image src='https://skpsoft.com/baby/wp-content/uploads/2016/09/default-thumbnail.jpg'/>
-        </Grid.Column>
-        <Grid.Column>
-          <Image src='https://skpsoft.com/baby/wp-content/uploads/2016/09/default-thumbnail.jpg'/>
-        </Grid.Column>
-        <Grid.Column>
-          <Image src='https://skpsoft.com/baby/wp-content/uploads/2016/09/default-thumbnail.jpg'/>
-        </Grid.Column>
-        <Grid.Column>
-          <Image src='https://skpsoft.com/baby/wp-content/uploads/2016/09/default-thumbnail.jpg'/>
-        </Grid.Column>
+        {gifArray}
       </Grid>
     );
   }
 }
 
-export default GifGrid
+export default GifGrid;
