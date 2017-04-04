@@ -1,18 +1,18 @@
 import React, {Component} from 'react'
-import {Grid, Image} from 'semantic-ui-react'
+import {Card, Container} from 'semantic-ui-react'
 
 class GifGrid extends React.Component {
+
   render() {
-    console.log(this.props.gifs);
     let gifArray = this.props.gifs.map((gif)=>
-    <Grid.Column>
-      <Image src={gif.images.fixed_width.url}/>
-    </Grid.Column>
+    <Card color='black' image={gif.images.fixed_width.url} />
     );
     return (
-      <Grid container columns={3}>
-        {gifArray}
-      </Grid>
+      <Container>
+        <Card.Group itemsPerRow={5}>
+          {gifArray}
+        </Card.Group>
+      </Container>
     );
   }
 }
