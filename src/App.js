@@ -25,7 +25,7 @@ class App extends Component {
     if (event.key === 'Enter') {
       this.setState({loading: true});
       this.setState({gifs: []});
-      fetch('http://api.giphy.com/v1/gifs/search?q=' + event.target.value + '&api_key=dc6zaTOxFJmzC', {method: 'get'}).then(res => res.json())
+      fetch('//api.giphy.com/v1/gifs/search?q=' + event.target.value + '&api_key=dc6zaTOxFJmzC', {method: 'get'}).then(res => res.json())
       .then(result => {
         setTimeout(
           ()=>that.setState({gifs: result.data, loading: false})
