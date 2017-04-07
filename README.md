@@ -1,4 +1,11 @@
-# **GIPHT**
+# **GIPHT** 🎁
 **Search GIFs**
+Powered by Giphy API
 
-Coming Soon!
+[DEMO](https://bhuvanmalik007.github.io/time-machine/)
+
+Built using :
+
+ - React
+ - Semantic-UI-React
+ - CSS Flexbox
