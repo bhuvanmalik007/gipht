@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Header from './components/header';
 import SearchBar from './components/searchbar';
 import GifGrid from './components/grid';
-import {Loader} from 'semantic-ui-react';
 import Spinner from 'react-spinkit';
 import About from './components/about';
 
@@ -39,19 +38,18 @@ class App extends Component {
     this.tabChanger = (e, tabName) => {
       this.setState({currentTab: tabName.name});
     }
-    // <Loader size='huge' className='Search'>Loading</Loader>
     return (
       <div className="App">
         <Header active={this.state.currentTab} tabChanger={this.tabChanger.bind(this)}/>
 
-        {this.state.currentTab == 'HOME' &&
+        {this.state.currentTab === 'HOME' &&
           (<div><SearchBar searchGiphy={this.searchGiphy}/>
             <br/>
             {this.state.loading && (<div className='Spinner'><Spinner spinnerName="three-bounce" /></div>)}
             {!this.state.loading && (<GifGrid gifs={this.state.gifs} className="Grid"/>)}
           </div>
           )}
-        {this.state.currentTab == 'ABOUT' && <About className='About'/>}
+        {this.state.currentTab === 'ABOUT' && <About className='About'/>}
       </div>
     );
   }
