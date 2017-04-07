@@ -3,7 +3,7 @@
 
 Powered by Giphy API
 
-[DEMO](https://bhuvanmalik007.github.io/time-machine/)
+[DEMO](https://bhuvanmalik007.github.io/gipht)
 
 Built using :
 
