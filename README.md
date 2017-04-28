@@ -10,3 +10,5 @@ Built using :
  - React
  - Semantic-UI-React
  - CSS Flexbox
+
+ [![forthebadge](http://forthebadge.com/images/badges/contains-cat-gifs.svg)](http://forthebadge.com)
